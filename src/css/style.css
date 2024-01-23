@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Montserrat:wght@200&display=swap');
+
+@layer base {
+    body {
+        /* @apply bg-gray-300 font-sans bg-[url('light-pattern.vg')]; */
+        /* @apply font-medium; */
+        @apply bg-gray-200 font-sans;
+    }
+    h1 {
+        @apply text-4xl font-bold font-display;
+    }
+    p {
+        @apply text-[14px];
+    }
+    img {
+        @apply rounded-3xl;
+    }
+    h2 {
+        @apply text-3xl font-bold 
+        mb-2 border-b-2 border-black;
+    }
+    h3 {
+        @apply text-2xl ;
+    }
+    input {
+        @apply w-full border-b py-1 bg-black focus:outline-none 
+        focus:border-[#f4ef60] transition duration-300 
+        text-[14px] text-white;
+    }
+    button {
+        @apply bg-black rounded-3xl w-[120px] 
+        border border-gray-500 text-gray-300 py-1 
+        hover:text-black hover:bg-[#f4ef60] 
+        transition duration-300;
+    }
+    
+}
+
+@layer components {
+    .imgProfile {
+        @apply rounded-3xl hover:scale-105 transition duration-300 overflow-hidden;
+    }
+    .buttonM {
+        @apply bg-black rounded-3xl w-fit border px-4 font-sans 
+        border-gray-600 text-gray-300 p-0.5 text-center
+        hover:text-black hover:bg-[#f4ef60] 
+        transition duration-300 cursor-pointer;
+    }
+}
