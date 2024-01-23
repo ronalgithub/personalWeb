@@ -454,9 +454,14 @@ body {
 
 h1 {
   font-family: Montserrat, sans-serif;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
   font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 p {
@@ -472,14 +477,19 @@ h2 {
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  font-size: 1.875rem;
-  line-height: 2.25rem;
   font-weight: 700;
 }
 
-h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 input {
@@ -506,31 +516,12 @@ input:focus {
   outline-offset: 2px;
 }
 
-button {
-  width: 120px;
-  border-radius: 1.5rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
-button:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 239 96 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
+/* button {
+        @apply bg-black rounded-3xl w-[120px] 
+        border border-gray-500 text-gray-300 py-1 
+        hover:text-black hover:bg-[#f4ef60] 
+        transition duration-300;
+    } */
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -633,7 +624,8 @@ button:hover {
 }
 
 .imgProfile {
-  overflow: hidden;
+  height: 6rem;
+  width: 6rem;
   border-radius: 1.5rem;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -648,10 +640,17 @@ button:hover {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@media (min-width: 1024px) {
+  .imgProfile {
+    height: 120px;
+    width: 120px;
+  }
+}
+
 .buttonM {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80px;
   cursor: pointer;
+  justify-content: center;
   border-radius: 1.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -662,7 +661,8 @@ button:hover {
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
-  font-family: Josefin Sans, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -677,6 +677,66 @@ button:hover {
   background-color: rgb(244 239 96 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .buttonM {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttonM {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.buttonP {
+  margin-top: 2.5rem;
+  width: 130px;
+  cursor: pointer;
+  justify-content: center;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.buttonP:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 239 96 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .buttonP {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 .fixed {
@@ -710,42 +770,28 @@ button:hover {
   margin-bottom: 2.5rem;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
+.mb-3 {
   margin-bottom: 0.75rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.ml-\[130px\] {
-  margin-left: 130px;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-2 {
   margin-top: 0.5rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .flex {
@@ -789,12 +835,12 @@ button:hover {
   max-width: 72rem;
 }
 
-.max-w-\[380px\] {
-  max-width: 380px;
+.max-w-\[350px\] {
+  max-width: 350px;
 }
 
-.max-w-\[600px\] {
-  max-width: 600px;
+.max-w-\[380px\] {
+  max-width: 380px;
 }
 
 .max-w-fit {
@@ -850,10 +896,6 @@ button:hover {
 
 .gap-\[2px\] {
   gap: 2px;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -961,12 +1003,12 @@ button:hover {
   padding: 0.5rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -1007,11 +1049,6 @@ button:hover {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .text-center {
@@ -1059,4 +1096,44 @@ button:hover {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:max-w-\[300px\] {
+    max-width: 300px;
+  }
+
+  .sm\:max-w-\[320px\] {
+    max-width: 320px;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .lg\:ml-\[130px\] {
+    margin-left: 130px;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .lg\:max-w-\[380px\] {
+    max-width: 380px;
+  }
+
+  .lg\:gap-1 {
+    gap: 0.25rem;
+  }
 }

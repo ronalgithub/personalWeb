@@ -14,7 +14,7 @@ myCanvas.style.height="100vh";
 //agar posisi confetti ke atas
 myCanvas.style.position="fixed"
 myCanvas.style.inset= 0;
-myCanvas.style.zIndex= -100;
+myCanvas.style.zIndex= -10;
 
 //5
 document.body.append(myCanvas);

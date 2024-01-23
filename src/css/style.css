@@ -10,7 +10,7 @@
         @apply bg-gray-200 font-sans;
     }
     h1 {
-        @apply text-4xl font-bold font-display;
+        @apply lg:text-4xl font-bold font-display;
     }
     p {
         @apply text-[14px];
@@ -19,32 +19,39 @@
         @apply rounded-3xl;
     }
     h2 {
-        @apply text-3xl font-bold 
+        @apply lg:text-3xl font-bold 
         mb-2 border-b-2 border-black;
     }
     h3 {
-        @apply text-2xl ;
+        @apply lg:text-2xl ;
     }
     input {
         @apply w-full border-b py-1 bg-black focus:outline-none 
         focus:border-[#f4ef60] transition duration-300 
         text-[14px] text-white;
     }
-    button {
+    /* button {
         @apply bg-black rounded-3xl w-[120px] 
         border border-gray-500 text-gray-300 py-1 
         hover:text-black hover:bg-[#f4ef60] 
         transition duration-300;
-    }
+    } */
     
 }
 
 @layer components {
     .imgProfile {
-        @apply rounded-3xl hover:scale-105 transition duration-300 overflow-hidden;
+        @apply rounded-3xl hover:scale-105 transition duration-300 
+        lg:w-[120px] lg:h-[120px] w-24 h-24;
     }
     .buttonM {
-        @apply bg-black rounded-3xl w-fit border px-4 font-sans 
+        @apply lg:text-sm  sm:my-2 lg:my-0 justify-center bg-black text-xs  rounded-3xl lg:w-fit w-[80px] border px-4
+        border-gray-600 text-gray-300 p-0.5 text-center
+        hover:text-black hover:bg-[#f4ef60] 
+        transition duration-300 cursor-pointer;
+    }
+    .buttonP {
+        @apply lg:text-sm justify-center bg-black text-xs  mt-10 rounded-3xl w-[130px] lg:w-fit border px-2
         border-gray-600 text-gray-300 p-0.5 text-center
         hover:text-black hover:bg-[#f4ef60] 
         transition duration-300 cursor-pointer;
